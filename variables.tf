@@ -1,0 +1,6 @@
+# aws region
+variable "aws_region" {}
+
+#vpc
+variable "pulsar_cidr_block" {}
+variable "vpc_name" {}
