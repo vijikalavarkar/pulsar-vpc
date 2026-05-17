@@ -1,0 +1,5 @@
+ami_id = "ami-05cf1e9f73fbad2e2"
+instance_type = "t3.micro"
+ec2_aws_region = "us-east-1"
+key_name = "KKey"
+instance_name = "demo-server"
