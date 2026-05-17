@@ -48,6 +48,8 @@ module "pulsar_internet_gateway" {
   source = "./modules/internet_gateway"
   pulsar_vpc_id = module.pulsar_vpc.pulsar_vpc_id
   internet_gateway_name = var.internet_gateway_name
+
+
 }
 
 #route table

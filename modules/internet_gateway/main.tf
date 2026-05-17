@@ -5,3 +5,4 @@ resource "aws_internet_gateway" "pulsar_internet_gateway" {
     Name = var.internet_gateway_name
   }
 }
+
