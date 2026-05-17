@@ -27,3 +27,6 @@ variable "route_table_name" {}
 
 #security group
 variable "security_group_name" {}
+
+#tester_igw
+variable "tester_internet_gateway_name" {}
