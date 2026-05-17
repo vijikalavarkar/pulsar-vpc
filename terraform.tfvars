@@ -28,5 +28,3 @@ route_table_name = "pulsar_public_route_table"
 #security group
 security_group_name = "pulsar_security_group"
 
-#tester_igw
-tester_internet_gateway_name = "tester_internet_gateway"

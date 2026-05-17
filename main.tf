@@ -49,8 +49,7 @@ module "pulsar_internet_gateway" {
   pulsar_vpc_id = module.pulsar_vpc.pulsar_vpc_id
   internet_gateway_name = var.internet_gateway_name
 
-  #tester_igw
-  tester_internet_gateway_name = var.tester_internet_gateway_name
+
 }
 
 #route table
