@@ -9,6 +9,7 @@ terraform {
     bucket = "vijethkalavarkar.bucket"
     key    = "pulsar.tfstate"
     region = "us-east-1"
+    use_lockfile = true
   }
 }
 
@@ -75,4 +76,25 @@ module "pulsar_security_group" {
   source = "./modules/security_groups"
   vpc_id = module.pulsar_vpc.pulsar_vpc_id
   security_group_name = var.security_group_name
+}
+
+#ec2
+module "pulsar_ec2" {
+  source = "./modules/ec2"
+  subnet1_id = module.pulsar_subnets.subnet1_id
+  pulsar_security_group_id = module.pulsar_security_group.pulsar_security_group_id
+  ami_id = var.ami_id
+  instance_type = var.instance_type
+  key_name = var.key_name
+  ec2_aws_region = var.ec2_aws_region
+  instance_name = var.instance_name
+}
+
+
+#dynamodb
+module "pulsar_dynamodb" {
+  source = "./modules/dynamodb"
+  terraform_locks_table_name = var.terraform_locks_table_name
+  billing_mode = var.billing_mode
+  hash_key = var.hash_key
 }
